@@ -1,0 +1,263 @@
+@import url();
+
+@font-face {
+    font-family: myFont;
+    src: url(Qrada.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFont;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.navbar a {  
+
+    position: relative;
+    color: #212322;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #525352;
+    transition: .3s;
+
+}
+
+.navbar a:hover:before{
+    width: 100%;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    position: relative;
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #212322;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Style submenus */
+.navbar ul ul {
+    display: none;
+    position: absolute; 
+    top: 100%;
+    left: 0;
+    font-size: 12px;
+}
+
+.navbar ul li:hover > ul {
+    display: block;
+}
+
+/* Adjust the style for nested submenus */
+.navbar ul ul ul {
+    left: 100%;
+    top: 0;
+    font-size: 10px;
+}
+
+/* Style hover effect for submenu items */
+.navbar ul ul li:hover > ul {
+    display: block;
+}
+
+
+/* Style the full-size div */
+.full-size-divback {
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+     /* Background color for the full-size div */
+    /* Add any other styling as needed */
+}
+
+/* Style the full-size div */
+.full-size-div {
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    background-color: #ffffff; /* Background color for the full-size div */
+    /* Add any other styling as needed */
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.half-size-div {
+    width: 100%;
+    height: 75vh; /* 100% of the viewport height */
+    background-color: #ffffff; /* Background color for the full-size div */
+    /* Add any other styling as needed */
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Slider pictures */
+
+.container {
+    width: 95%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-wrapper {
+    position: relative;
+  }
+  .slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+  .slider-wrapper .slide-button:hover {
+    background: #404040;
+  }
+  .slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+  }
+  .slider-wrapper .slide-button#next-slide {
+    right: -25px;
+  }
+  .slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    align-items: center;
+  }
+  .slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+  }
+  .slider-wrapper .image-list .image-item {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    filter: saturate(10%);
+    transition: 0.5s;
+  }
+
+  .slider-wrapper .image-list .image-item:hover {
+    width: 625px;
+    height: 425px;
+    object-fit: cover;
+    filter: saturate(100%);
+    transition: 0.5s;
+  }
+
+  .container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+  }
+  .slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+  }
+  .slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  }
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+  /* Styles for mobile and tablets */
+  @media only screen and (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+      display: none !important;
+    }
+    .slider-wrapper .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+    
+    .slider-wrapper .image-list .image-item {
+      width: 280px;
+      height: 380px;
+    }
+
+    .slider-wrapper .image-list .image-item:hover {
+      width: 300px;
+      height: 400px;
+    }
+
+    .slider-scrollbar .scrollbar-thumb {
+      width: 20%;
+    }
+  }

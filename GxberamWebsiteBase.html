@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="full-size-divback">
+    <!-- Your content within the full-size div here -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.460/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/7AKwNwCQHO541xVl/scene.splinecode"></spline-viewer>
+</div>
+    
+
+  <header class="header">
+    <a href="#" class="logo">Logo</a>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="sub-menu">
+              <a href="#">Projects</a>
+              <ul class="sub-menu">
+                  <li class="sub-menu">
+                      <a href="#">Proyectos Residenciales</a>
+                      <ul class="sub-menu">
+                          <li><a href="#">Urbanizacion Constelación</a></li>
+                          <li><a href="#">Le Grue Dance Studio</a></li>
+                          <li><a href="#">Proyecto K</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                    <a href="#">Proyectos Comerciales</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Huawei</a></li>
+                        <li><a href="#">Sadhana</a></li>
+                        <li><a href="#">The North Face</a></li>
+                        <li><a href="#">Kl by chef Karli</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                  <a href="#">Mobiliario</a>
+                  <ul class="sub-menu">
+                      <li><a href="#">Flowbloom</a></li>
+                      <li><a href="#">St Display</a></li>
+                      <li><a href="#">Xperience Couch</a></li>
+                      <li><a href="#">Pixca Chair Collection</a></li>
+                  </ul>
+              </li>
+              </ul>
+          </li>
+          <li><a href="#">Galllery</a></li>
+          <li><a href="#">Contact</a></li>
+      </nav>
+  </header>
+
+  <div  class="half-size-div">
+    <div class="menu">
+      <ul>
+          <li onclick="changeImage('image1.jpg')">Option 1</li>
+          <li onclick="changeImage('image2.jpg')">Option 2</li>
+          <li onclick="changeImage('image3.jpg')">Option 3</li>
+      </ul>
+  </div>
+  <div class="image-container">
+      <img id="displayed-image" src="default.jpg" alt="Displayed Image">
+  </div>
+  </div>
+
+  <div class="half-size-div">
+    <div class="container">
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          <
+        </button>
+        <ul class="image-list">  
+          <img href="" class="image-item" src="Slider pictures/Sadhana.png" alt="img-1" />
+          <img href="" class="image-item" src="Slider pictures/beta.png" alt="img-2" />
+          <img href="" class="image-item" src="Slider pictures/KlbyChefKarli.png" alt="img-3" />
+          <img href="" class="image-item" src="Slider pictures/LaCasaDeLosSuenos.png" alt="img-4" />
+          <img href="" class="image-item" src="Slider pictures/ProyectoLosCafetos.png" alt="img-5" />
+          <img href="" class="image-item" src="Slider pictures/Sadhana.png" alt="img-6" />
+          <img href="" class="image-item" src="images/img-7.jpg" alt="img-7" />
+          <img href="" class="image-item" src="images/img-8.jpg" alt="img-8" />
+          <img href="" class="image-item" src="images/img-9.jpg" alt="img-9" />
+          <img href="" class="image-item" src="images/img-10.jpg" alt="img-10" />
+        </ul>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          >
+        </button>
+      </div>
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="full-size-div">
+
+  </div>
+  
+  
+
+
+</body>
+</html>
