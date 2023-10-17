@@ -187,13 +187,15 @@
     transition: 0.5s;
   }
 
+  /*
+  ***This was the line of code affecting and moving the images when zooming in them***
   .slider-wrapper .image-list .image-item:hover {
     width: 625px;
     height: 425px;
     object-fit: cover;
     filter: saturate(100%);
     transition: 0.5s;
-  }
+  }*/
 
   .container .slider-scrollbar {
     height: 24px;
@@ -235,6 +237,17 @@
     right: 0;
     top: -10px;
     bottom: -10px;
+  }
+/*Fixing bug where hovering on images and zooming in them would move other elements*/
+  .image-item{
+    transform: .2s;
+    z-index: 2;
+  }
+
+  .slider-wrapper .image-list .image-item:hover {
+    transform: scale(1.05);
+    z-index: 1;
+    filter: saturate(100%);
   }
 
   body{
@@ -280,8 +293,6 @@
     font-size:2em;
     margin:0% 1%;
     }
-
-
 
 
 
