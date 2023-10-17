@@ -240,7 +240,7 @@
   }
 /*Fixing bug where hovering on images and zooming in them would move other elements*/
   .image-item{
-    transform: .2s;
+    transform: 1s;
     z-index: 2;
   }
 
